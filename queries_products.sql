@@ -1,6 +1,8 @@
 -- Ioana A Mititean
 -- 22.2: SQL Querying
 
+\c products_db
+
 -- 1) Add a product to the table with the name of “chair”, price of 44.00, and can_be_returned of false.
 -- 2) Add a product to the table with the name of “stool”, price of 25.99, and can_be_returned of true.
 -- 3) Add a product to the table with the name of “table”, price of 124.00, and can_be_returned of false.
