@@ -1,1 +1,2 @@
--- Comments in SQL Start with dash-dash --
+-- Ioana A Mititean
+-- 22.2: SQL Querying
