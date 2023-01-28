@@ -37,6 +37,12 @@ GROUP BY category
 ORDER BY avg_rating DESC;
 
 -- 7) Find the name, price, and rating of the most expensive app with a rating that’s less than 3.
+SELECT app_name, price as max_price
+FROM analytics
+WHERE rating < 3.0
+ORDER BY price DESC
+LIMIT 1;
+
 -- 8) Find all apps with a min install not exceeding 50, that have a rating. Order your results by highest rated first.
 -- 9) Find the names of all apps that are rated less than 3 with at least 10000 reviews.
 -- 10) Find the top 10 most-reviewed apps that cost between 10 cents and a dollar.
