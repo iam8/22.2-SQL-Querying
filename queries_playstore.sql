@@ -70,6 +70,24 @@ WHERE last_updated = (SELECT MIN(last_updated)
                       FROM analytics);
 
 -- 12) Find the most expensive app (the query is very similar to #11).
+SELECT app_name, price
+FROM analytics
+WHERE price = (SELECT MAX(price)
+               FROM analytics);
+
 -- 13) Count all the reviews in the Google Play Store.
+SELECT SUM(reviews) AS total_reviews
+FROM analytics;
+
 -- 14) Find all the categories that have more than 300 apps in them.
+SELECT category, COUNT(*)
+FROM analytics
+GROUP BY category
+HAVING COUNT(*) > 300;
+
 -- 15) Find the app that has the highest proportion of min_installs to reviews, among apps that have been installed at least 100,000 times. Display the name of the app along with the number of reviews, the min_installs, and the proportion.
+SELECT app_name, reviews, min_installs, min_installs / reviews AS proportion
+FROM analytics
+WHERE min_installs >= 100000
+AND min_installs / reviews = (SELECT MAX(min_installs / reviews)
+                              FROM analytics);
