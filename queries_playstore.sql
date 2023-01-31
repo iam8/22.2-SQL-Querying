@@ -91,3 +91,22 @@ FROM analytics
 WHERE min_installs >= 100000
 AND min_installs / reviews = (SELECT MAX(min_installs / reviews)
                               FROM analytics);
+
+
+-- FURTHER STUDY
+
+-- FS1. Find the name and rating of the top rated apps in each category, among apps that have been installed at least 50,000 times.
+SELECT category, MAX(rating) AS max_rating
+FROM analytics
+WHERE min_installs >= 50000
+GROUP BY category;
+
+
+-- FS2. Find all the apps that have a name similar to “facebook”.
+SELECT app_name
+FROM analytics
+WHERE app_name ILIKE '%Facebook%';
+
+-- FS3. Find all the apps that have more than 1 genre.
+
+-- FS4. Find all the apps that have education as one of their genres.
