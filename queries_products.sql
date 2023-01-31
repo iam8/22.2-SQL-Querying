@@ -5,18 +5,21 @@
 
 -- 1) Add a product to the table with the name of “chair”, price of 44.00, and can_be_returned of false.
 INSERT INTO products
-(name, price, can_be_returned)
-VALUES ('chair', 44.00, false);
+    (name, price, can_be_returned)
+VALUES
+    ('chair', 44.00, false);
 
 -- 2) Add a product to the table with the name of “stool”, price of 25.99, and can_be_returned of true.
 INSERT INTO products
-(name, price, can_be_returned)
-VALUES ('stool', 25.99, true);
+    (name, price, can_be_returned)
+VALUES
+    ('stool', 25.99, true);
 
 -- 3) Add a product to the table with the name of “table”, price of 124.00, and can_be_returned of false.
 INSERT INTO products
-(name, price, can_be_returned)
-VALUES ('table', 124.00, false);
+    (name, price, can_be_returned)
+VALUES
+    ('table', 124.00, false);
 
 -- 4) Display all of the rows and columns in the table.
 SELECT * FROM products;
@@ -29,8 +32,9 @@ SELECT name, price FROM products;
 
 -- 7) Add a new product - make up whatever you would like!
 INSERT INTO products
-(name, price, can_be_returned)
-VALUES ('Apple iPhone 3799 Ultimate Rainbow Tl55', 3000000, false);
+    (name, price, can_be_returned)
+VALUES
+    ('Apple iPhone 3799 Ultimate Rainbow Tl55', 3000000, false);
 
 -- 8) Display only the products that can_be_returned.
 SELECT * FROM products
